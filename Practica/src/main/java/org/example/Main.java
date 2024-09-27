@@ -12,8 +12,14 @@ public class Main {
         //ejercicio.actividad_inicial();
         // ejercicio.ejercicio1();
 
-        Operadores operadores = new Operadores();
-        operadores.logicos();
+        //Operadores operadores = new Operadores();
+        //operadores.logicos();
+
+        //Excepciones excepciones = new Excepciones();
+        //excepciones.control_excepciones();
+
+        Bateria3 bateria3 = new Bateria3();
+        bateria3.ejer3();
 
     }
 }

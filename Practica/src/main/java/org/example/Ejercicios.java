@@ -1,10 +1,11 @@
 package org.example;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ejercicios {
 
-    public void actividad_inicial(){
+    public void actividad_inicial() {
 
         System.out.println("¿Cómo te llamas?");
 
@@ -21,22 +22,27 @@ public class Ejercicios {
         int num1 = 0;
         int num2 = 0;
 
-        while (num1==num2){
-            System.out.println("Introduce un número...");
-            num1 = entrada.nextInt();
+        while (num1 == num2) {
 
-            System.out.println("Introduce otro número...");
-            num2 = entrada.nextInt();
+            try {
+                System.out.println("Introduce un número...");
+                num1 = entrada.nextInt();
 
-            if(num1==num2){
-                System.out.println("ERROR. Los números son iguales.");
+                System.out.println("Introduce otro número...");
+                num2 = entrada.nextInt();
+
+                if (num1 == num2) {
+                    System.out.println("ERROR. Los números son iguales.");
+                }
+
+            } catch (InputMismatchException er) {
+                System.out.println("ERROR. Introduce un valor válido...");
+                entrada.nextLine();
             }
 
+            int resultado = num1 + num2;
+
+            System.out.println("El resultado de la suma es " + resultado);
         }
-
-        int resultado = num1 + num2;
-
-        System.out.println("El resultado de la suma es " + resultado);
-
     }
 }
