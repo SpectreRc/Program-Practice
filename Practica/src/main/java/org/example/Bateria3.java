@@ -102,9 +102,90 @@ public class Bateria3 {
         }
     }
 
-    public void ejer4(){
+    public void ejer4() {
 
         Scanner entrada = new Scanner(System.in);
-        
+
+        float numb = 0;
+        float numh = 0;
+        float resultado = 0;
+
+        try {
+            System.out.println("Introduce un valor base mayor que 0...");
+            numb = entrada.nextFloat();
+
+            while (numb <= 0) {
+                System.out.println("ERROR. El valor de la base debe ser mayor que 0.");
+                System.out.println("Introduce un valor base mayor que 0...");
+                numb = entrada.nextFloat();
+            }
+
+            System.out.println("Introduce un valor altura mayor que 0...");
+            numh = entrada.nextFloat();
+
+            while (numh <= 0) {
+                System.out.println("ERROR. El valor de la altura debe ser mayor que 0.");
+                System.out.println("Introduce un valor altura mayor que 0...");
+                numh = entrada.nextFloat();
+            }
+
+            resultado = (numb * numh) / 2;
+            System.out.println("El área del triángulo es " + resultado);
+
+        } catch (InputMismatchException er) {
+            System.out.println("ERROR. Introduce un valor válido...");
+            entrada.nextLine();
+        }
+    }
+
+    public void ejer5() {
+
+        Scanner entrada = new Scanner(System.in);
+
+        float num1 = 0;
+        float num2 = 0;
+        float num3 = 0;
+        float minimo;
+
+        System.out.println("Introduce el primer número:");
+        num1 = entrada.nextFloat();
+
+        System.out.println("Introduce el segundo número:");
+        num2 = entrada.nextFloat();
+
+        System.out.println("Introduce el tercer número:");
+        num3 = entrada.nextFloat();
+
+        if (num1 < num2 && num1 < num3) {
+            minimo = num1;
+        } else if (num2 < num1 && num2 < num3) {
+            minimo = num2;
+        } else {
+            minimo = num3;
+        }
+
+        System.out.println("El número mínimo es: " + minimo);
+
+    }
+
+    public void ejer6() {
+
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("¿Tienes tomate? (sí/no):");
+        String tomate = entrada.nextLine().toLowerCase();
+
+        System.out.println("¿Tienes aceite? (sí/no):");
+        String aceite = entrada.nextLine().toLowerCase();
+
+        System.out.println("¿Tienes jamón? (sí/no):");
+        String jamon = entrada.nextLine().toLowerCase();
+
+        if (tomate.equals("no") || aceite.equals("no") || jamon.equals("no")) {
+            System.out.println("¡Tenemos que ir a comprar!");
+        } else {
+            System.out.println("¡No tenemos que ir a comprar!");
+        }
     }
 }
+

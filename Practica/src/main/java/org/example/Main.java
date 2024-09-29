@@ -19,7 +19,7 @@ public class Main {
         //excepciones.control_excepciones();
 
         Bateria3 bateria3 = new Bateria3();
-        bateria3.ejer4();
+        bateria3.ejer6();
 
     }
 }
