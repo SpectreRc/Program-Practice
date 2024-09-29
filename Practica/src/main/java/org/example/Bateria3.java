@@ -187,5 +187,27 @@ public class Bateria3 {
             System.out.println("¡No tenemos que ir a comprar!");
         }
     }
+
+    public void practica3() {
+
+        Scanner entrada = new Scanner(System.in);
+
+        int edad = 0;
+        int años = 0;
+
+        System.out.println("Introduce tu nombre...");
+        String nombre = entrada.nextLine();
+
+        System.out.println("Hola " + nombre + "Introduce tu edad...");
+        edad = entrada.nextInt();
+
+        if (edad >= 18) {
+            System.out.println("Enhorabuena " + nombre + ", puedes votar...");
+        } else {
+            años = 18 - edad;
+            System.out.println("Lo siento " + nombre + ", no puedes votar");
+            System.out.println("Te faltan " + años + " años para ser mayor de edad");
+        }
+    }
 }
 
