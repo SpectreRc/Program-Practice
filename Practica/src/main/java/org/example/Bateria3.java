@@ -192,14 +192,20 @@ public class Bateria3 {
 
         Scanner entrada = new Scanner(System.in);
 
-        int edad = 0;
+        int edad = -1;
         int años = 0;
 
         System.out.println("Introduce tu nombre...");
         String nombre = entrada.nextLine();
 
-        System.out.println("Hola " + nombre + "Introduce tu edad...");
-        edad = entrada.nextInt();
+        while (edad < 0) {
+            System.out.println("Hola " + nombre + "Introduce tu edad...");
+            edad = entrada.nextInt();
+
+            if (edad < 0) {
+                System.out.println("Error: La edad no puede ser negativa. Intenta de nuevo.");
+            }
+        }
 
         if (edad >= 18) {
             System.out.println("Enhorabuena " + nombre + ", puedes votar...");
