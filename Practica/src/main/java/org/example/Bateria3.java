@@ -215,5 +215,47 @@ public class Bateria3 {
             System.out.println("Te faltan " + años + " años para ser mayor de edad");
         }
     }
+
+    public void practica4() {
+
+        Scanner entrada = new Scanner(System.in);
+
+        int num1 = 0;
+        int num2 = 0;
+        int resultado = 0;
+
+        System.out.println("Introduce el multiplicando (3 cifras): ");
+        num1 = entrada.nextInt();
+
+        System.out.println("Introduce el multiplicador (3 cifras): ");
+        num2 = entrada.nextInt();
+
+        resultado = (num1 * num2);
+
+        System.out.println("El producto de la multiplicación es " + resultado);
+        System.out.println("El producto es ");
+        System.out.println("  " + num1);
+        System.out.println("x " + num2);
+        System.out.println("--------");
+
+
+        String numC = Integer.toString(num2);
+
+        String numC_1 = numC.substring(0,1);
+        int num_1 = Integer.parseInt(numC_1);
+
+        String numC_2 = numC.substring(1,2);
+        int num_2 = Integer.parseInt(numC_2);
+
+        String numC_3 = numC.substring(2,3);
+        int num_3 = Integer.parseInt(numC_3);
+
+        System.out.println("  " + num1 * num_3);
+        System.out.println(" " + num1 * num_2);
+        System.out.println("" + num1 * num_1);
+        System.out.println("--------");
+        System.out.println("" + resultado);
+        
+    }
 }
 
