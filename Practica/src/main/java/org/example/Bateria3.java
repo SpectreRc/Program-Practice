@@ -223,39 +223,45 @@ public class Bateria3 {
         int num1 = 0;
         int num2 = 0;
         int resultado = 0;
+        boolean error = true;
 
-        System.out.println("Introduce el multiplicando (3 cifras): ");
-        num1 = entrada.nextInt();
+        while(error==true) {
+            try {
+                System.out.println("Introduce el multiplicando (3 cifras): ");
+                num1 = entrada.nextInt();
+                System.out.println("Introduce el multiplicador (3 cifras): ");
+                num2 = entrada.nextInt();
+                error = false;
+            } catch (InputMismatchException er) {
+                System.out.println("ERROR. Introduce un valor válido...");
+                entrada.nextLine();
+            }
+        }
+            resultado = (num1 * num2);
 
-        System.out.println("Introduce el multiplicador (3 cifras): ");
-        num2 = entrada.nextInt();
+            System.out.println("El producto de la multiplicación es " + resultado);
+            System.out.println("El producto es ");
+            System.out.println("  " + num1);
+            System.out.println("x " + num2);
+            System.out.println("--------");
 
-        resultado = (num1 * num2);
+            String numC = Integer.toString(num2);
 
-        System.out.println("El producto de la multiplicación es " + resultado);
-        System.out.println("El producto es ");
-        System.out.println("  " + num1);
-        System.out.println("x " + num2);
-        System.out.println("--------");
+            String numC_1 = numC.substring(0,1);
+            int num_1 = Integer.parseInt(numC_1);
 
+            String numC_2 = numC.substring(1,2);
+            int num_2 = Integer.parseInt(numC_2);
 
-        String numC = Integer.toString(num2);
+            String numC_3 = numC.substring(2,3);
+            int num_3 = Integer.parseInt(numC_3);
 
-        String numC_1 = numC.substring(0,1);
-        int num_1 = Integer.parseInt(numC_1);
-
-        String numC_2 = numC.substring(1,2);
-        int num_2 = Integer.parseInt(numC_2);
-
-        String numC_3 = numC.substring(2,3);
-        int num_3 = Integer.parseInt(numC_3);
-
-        System.out.println("  " + num1 * num_3);
-        System.out.println(" " + num1 * num_2);
-        System.out.println("" + num1 * num_1);
-        System.out.println("--------");
-        System.out.println("" + resultado);
-        
+            System.out.println("  " + num1 * num_3);
+            System.out.println(" " + num1 * num_2);
+            System.out.println("" + num1 * num_1);
+            System.out.println("--------");
+            System.out.println("" + resultado);
+        }
     }
-}
+
 
