@@ -10,8 +10,11 @@ public class Main {
         //cosasstring cosas = new cosasstring();
         //cosas.caracteres();
 
-        bateria1u2 bateria = new bateria1u2();
-        bateria.ejer3();
+        //bateria1u2 bateria = new bateria1u2();
+        //bateria.ejer3();
+
+        practice1u2 prac1 = new practice1u2();
+        prac1.Prac1();
 
     }
 }

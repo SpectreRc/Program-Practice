@@ -87,7 +87,7 @@ public class bateria1u2 {
         String frase = teclado.nextLine();
         frase = " " + frase + " ";
         //frase = frase.replace(",", " ");
-        frase = frase.replaceAll([^\\p{Alpha}])
+        //frase = frase.replaceAll();
         frase = frase.toLowerCase();
 
         System.out.println("Introduce una subcadena: ");
