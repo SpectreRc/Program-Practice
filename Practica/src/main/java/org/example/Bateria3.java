@@ -219,49 +219,63 @@ public class Bateria3 {
     public void practica4() {
 
         Scanner entrada = new Scanner(System.in);
+        int num_1 = 0;
+        int num_2 = 0;
+        boolean rep = true;
+        boolean rep1 = true;
+        boolean rep2 = true;
 
-        int num1 = 0;
-        int num2 = 0;
-        int resultado = 0;
-        boolean error = true;
-
-        while(error==true) {
+        while (rep) {
             try {
                 System.out.println("Introduce el multiplicando (3 cifras): ");
-                num1 = entrada.nextInt();
-                System.out.println("Introduce el multiplicador (3 cifras): ");
-                num2 = entrada.nextInt();
-                error = false;
+                while (rep1) {
+                    num_1 = entrada.nextInt();
+
+                    if (num_1 >= 100 && num_1 < 1000) {
+                        rep1 = false;
+                        System.out.println("Introduce el multiplicador (3 cifras): ");
+                    } else {
+                        System.out.println("ERROR. Introduce un valor de 3 cifras: ");
+                        entrada.nextLine();
+                    }
+                }
+
+                while (rep2) {
+                    num_2 = entrada.nextInt();
+                    if (num_2 >= 100 && num_2 < 1000) {
+                        rep2 = false;
+                        rep = false;
+
+                        System.out.println("");
+                        System.out.println("El producto de la multiplicación es: " + (num_1 * num_2));
+                        System.out.println("El proceso es: ");
+                        System.out.println("   " + num_1);
+                        System.out.println(" x " + num_2);
+                        System.out.println("-------");
+
+                        String multi = Integer.toString(num_2);
+                        String dig1 = multi.substring(0, 1);
+                        String dig2 = multi.substring(1, 2);
+                        String dig3 = multi.substring(2, 3);
+
+                        int dig_1 = Integer.parseInt(dig1);
+                        int dig_2 = Integer.parseInt(dig2);
+                        int dig_3 = Integer.parseInt(dig3);
+
+                        System.out.println("   " + (num_1 * dig_3));
+                        System.out.println(" " + (num_1 * dig_2) + "0");
+                        System.out.println("" + (num_1 * dig_1) + "00");
+                        System.out.println("-------");
+                        System.out.println(num_1 * num_2);
+                    } else {
+                        System.out.println("ERROR. Introduce un valor de 3 cifras: ");
+                        entrada.nextLine();
+                    }
+                }
             } catch (InputMismatchException er) {
                 System.out.println("ERROR. Introduce un valor válido...");
                 entrada.nextLine();
             }
         }
-            resultado = (num1 * num2);
-
-            System.out.println("El producto de la multiplicación es " + resultado);
-            System.out.println("El producto es ");
-            System.out.println("  " + num1);
-            System.out.println("x " + num2);
-            System.out.println("--------");
-
-            String numC = Integer.toString(num2);
-
-            String numC_1 = numC.substring(0,1);
-            int num_1 = Integer.parseInt(numC_1);
-
-            String numC_2 = numC.substring(1,2);
-            int num_2 = Integer.parseInt(numC_2);
-
-            String numC_3 = numC.substring(2,3);
-            int num_3 = Integer.parseInt(numC_3);
-
-            System.out.println("  " + num1 * num_3);
-            System.out.println(" " + num1 * num_2);
-            System.out.println("" + num1 * num_1);
-            System.out.println("--------");
-            System.out.println("" + resultado);
-        }
     }
-
-
+}
