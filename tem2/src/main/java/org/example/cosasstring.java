@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
-public class cosasstring {
+public class Cosasstring {
 
     public void caracteres(){
 

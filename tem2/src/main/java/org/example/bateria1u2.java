@@ -3,7 +3,7 @@ package org.example;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class bateria1u2 {
+public class Bateria1u2 {
 
     public void ejer1(){
 

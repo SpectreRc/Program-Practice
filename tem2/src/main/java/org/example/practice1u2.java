@@ -2,13 +2,12 @@ package org.example;
 
 import java.util.Scanner;
 
-public class practice1u2 {
+public class Practice1u2 {
 
     public void Prac1() {
 
         Scanner prac = new Scanner(System.in);
 
-        //cambiar esto
         String fechaNacimiento = "";
         boolean error = false;
 

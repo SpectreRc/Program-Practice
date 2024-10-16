@@ -3,7 +3,7 @@ package org.example;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-public class localdatetime {
+public class Localdatetime {
 
     public void generacion(){
 
@@ -23,45 +23,85 @@ public class localdatetime {
 
         boolean error = false;
 
-        if(modo.equals("1")){
+        switch(modo){
+            case "1":
+                System.out.println("Introduce tu año de nacimiento: ");
+                String anyo = entrada.next();
 
-            System.out.println("Introduce tu año de nacimiento: ");
-            String anyo = entrada.next();
+                try{
+                    anyo_nacimiento = Integer.parseInt(anyo);
+                }catch(NumberFormatException e1){
+                    System.out.println("El formato del año no es correto. " + e1.getMessage());
+                }
 
-            try{
-                anyo_nacimiento = Integer.parseInt(anyo);
-            }catch(NumberFormatException e1){
-                System.out.println("El formato del año no es correto. " + e1.getMessage());
-            }
+                if(anyo_nacimiento < 1900 || anyo_nacimiento > anyo_actual){
+                    System.out.println("El año introducido no es correcto. ");
+                    error = true;
+                }
+                break;
+            case "2":
+                System.out.println("Introduce tu edad: ");
+                int edad = 0;
 
-            if(anyo_nacimiento < 1900 || anyo_nacimiento > anyo_actual){
-                System.out.println("El año introducido no es correcto. ");
+                if(entrada.hasNextInt()){
+                    edad = entrada.nextInt();
+                }else{
+                    System.out.println("El formato de la edad no es correcto. ");
+                    error = true;
+                }
+
+                if(edad < 0){
+                    System.out.println("La edad introducida no es correcta. ");
+                    error = true;
+                }else{
+                    anyo_nacimiento = anyo_actual - edad;
+                }
+                break;
+            default:
+                System.out.println("El modo no existe. ");
                 error = true;
-            }
-
-        } else if (modo.equals("2")) {
-
-            System.out.println("Introduce tu edad: ");
-            int edad = 0;
-
-            if(entrada.hasNextInt()){
-                edad = entrada.nextInt();
-            }else{
-                System.out.println("El formato de la edad no es correcto. ");
-                error = true;
-            }
-
-            if(edad < 0){
-                System.out.println("La edad introducida no es correcta. ");
-                error = true;
-            }else{
-                anyo_nacimiento = anyo_actual - edad;
-            }
-
-        }else{
-            System.out.println("El modo no existe. ");
-            error = true;
         }
+
+//        if(modo.equals("1")){
+//
+//            System.out.println("Introduce tu año de nacimiento: ");
+//            String anyo = entrada.next();
+//
+//            try{
+//                anyo_nacimiento = Integer.parseInt(anyo);
+//            }catch(NumberFormatException e1){
+//                System.out.println("El formato del año no es correto. " + e1.getMessage());
+//            }
+//
+//            if(anyo_nacimiento < 1900 || anyo_nacimiento > anyo_actual){
+//                System.out.println("El año introducido no es correcto. ");
+//                error = true;
+//            }
+//
+//        } else if (modo.equals("2")) {
+//
+//            System.out.println("Introduce tu edad: ");
+//            int edad = 0;
+//
+//            if(entrada.hasNextInt()){
+//                edad = entrada.nextInt();
+//            }else{
+//                System.out.println("El formato de la edad no es correcto. ");
+//                error = true;
+//            }
+//
+//            if(edad < 0){
+//                System.out.println("La edad introducida no es correcta. ");
+//                error = true;
+//            }else{
+//                anyo_nacimiento = anyo_actual - edad;
+//            }
+//
+//        }else{
+//            System.out.println("El modo no existe. ");
+//            error = true;
+//        }
+
         if(!error){
             if(anyo_nacimiento >= 1900 && anyo_nacimiento <= 1927){
                 System.out.println("Eres de la generación sin bautizar. ");
