@@ -13,8 +13,8 @@ public class Main {
         //bateria1u2 bateria = new bateria1u2();
         //bateria.ejer3();
 
-        //Practice2u2 prac = new Practice2u2();
-        //prac.prac();
+        Practica2u2 prac = new Practica2u2();
+        prac.prac2();
 
         //Localdatetime ejer = new Localdatetime();
         //ejer.generacion();

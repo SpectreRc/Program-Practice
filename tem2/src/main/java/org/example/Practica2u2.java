@@ -1,10 +1,11 @@
 package org.example;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Practica2u2 {
 
-    public void prac(){
+    public void prac2(){
 
         Scanner entrada = new Scanner(System.in);
 
@@ -21,37 +22,43 @@ public class Practica2u2 {
 
         double resultado;
 
-        switch (operacion){
-            case "+":
-                resultado = num1 + num2;
-                break;
-            case "-":
-                resultado = num1 - num2;
-                break;
-            case "x":
-                resultado = num1 * num2;
-                break;
-            case "/":
-                if (num2 != 0) {
-                    resultado = (double) num1 / num2;
-                } else {
-                    System.out.println("Error: División entre 0 no permitida.");
+        try{
+            switch (operacion){
+                case "+":
+                    resultado = num1 + num2;
+                    break;
+                case "-":
+                    resultado = num1 - num2;
+                    break;
+                case "x":
+                    resultado = num1 * num2;
+                    break;
+                case "/":
+                    if (num2 != 0) {
+                        resultado = (double) num1 / num2;
+                    } else {
+                        System.out.println("Error: División entre 0 no permitida.");
+                        return;
+                    }
+                    break;
+                case "R":
+                    if (num1 >= 0) {
+                        resultado = Math.sqrt(num1);
+                    } else {
+                        System.out.println("Error: No se puede calcular la raíz cuadrada de un número negativo.");
+                        return;
+                    }
+                    break;
+                default:
+                    System.out.println("Operación no válida.");
                     return;
-                }
-                break;
-            case "R":
-                if (num1 >= 0) {
-                    resultado = Math.sqrt(num1);
-                } else {
-                    System.out.println("Error: No se puede calcular la raíz cuadrada de un número negativo.");
-                    return;
-                }
-                break;
-            default:
-                System.out.println("Operación no válida.");
-                return;
+            }
+            System.out.println("El resultado de la operación es: " + resultado);
+
+        } catch (InputMismatchException e){
+            System.out.println("Error. ");
         }
-        System.out.println("El resultado de la operación es: " + resultado);
+
     }
 
 }
