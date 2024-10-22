@@ -13,14 +13,14 @@ public class Main {
         //bateria1u2 bateria = new bateria1u2();
         //bateria.ejer3();
 
-        //Practica2u2 prac = new Practica2u2();
-        //prac.prac2();
+        Practica3u2 prac = new Practica3u2();
+        prac.prac3();
 
         //Localdatetime ejer = new Localdatetime();
         //ejer.generacion();
 
-        Bucles bucles = new Bucles();
-        bucles.ejercicios2();
+        //Bucles bucles = new Bucles();
+        //bucles.ejercicios2();
 
     }
 }
