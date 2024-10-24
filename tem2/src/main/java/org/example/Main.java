@@ -13,8 +13,8 @@ public class Main {
         //bateria1u2 bateria = new bateria1u2();
         //bateria.ejer3();
 
-        Practica3u2 prac = new Practica3u2();
-        prac.prac3();
+        //Practica3u2 prac = new Practica3u2();
+        //prac.prac3();
 
         //Localdatetime ejer = new Localdatetime();
         //ejer.generacion();
@@ -22,5 +22,7 @@ public class Main {
         //Bucles bucles = new Bucles();
         //bucles.ejercicios2();
 
+        Aleatorios aleatorios = new Aleatorios();
+        aleatorios.ejer2();
     }
 }
