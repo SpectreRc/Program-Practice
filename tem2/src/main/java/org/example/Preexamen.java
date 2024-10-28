@@ -2,9 +2,9 @@ package org.example;
 
 import java.util.Scanner;
 
-public class PreExamen {
+public class Preexamen {
 
-    public void preexamen1 () {
+    public void preexamen1() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -16,22 +16,22 @@ public class PreExamen {
         int menor = 0;
         int igual = 0;
 
-        for (int i = 0 ; i < cantidad ; i++){
+        for (int i = 0; i < cantidad; i++) {
 
             System.out.println("Introduce un número: ");
             num = entrada.nextInt();
 
-            if (num > 0){
+            if (num > 0) {
                 mayor++;
-            }else if (num < 0){
+            } else if (num < 0) {
                 menor++;
-            }else
+            } else
                 igual++;
         }
         System.out.println("Hay " + mayor + " numeros mayores que cero, " + menor + " numeros menores que cero y " + igual + " numeros iguales que cero.");
     }
 
-    public void preexamen2 () {
+    public void preexamen2() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -42,12 +42,12 @@ public class PreExamen {
         System.out.println("Introduce el exponente.");
         int exponente = entrada.nextInt();
 
-        while (exponente < 0){
+        while (exponente < 0) {
             System.out.println("ERROR. introduce un exponente positivo.");
             exponente = entrada.nextInt();
         }
 
-        for (int i = 0 ; i < exponente ; i++) {
+        for (int i = 0; i < exponente; i++) {
 
             resultado += base * base;
 
@@ -64,7 +64,7 @@ public class PreExamen {
 
     }
 
-    public void preexamen3 () {
+    public void preexamen3() {
 
         Scanner entrada = new Scanner(System.in);
         System.out.println("¿A cuántos meses quieres finaciar tu producto?");
@@ -72,7 +72,7 @@ public class PreExamen {
         long euros = 10;
         long total = 0;
 
-        for (int i = 1 ; i <= meses ; i++) {
+        for (int i = 1; i <= meses; i++) {
 
             total += euros;
 
@@ -86,15 +86,15 @@ public class PreExamen {
 
     }
 
-    public void preexamen4 () {
+    public void preexamen4() {
 
         Scanner entrada = new Scanner(System.in);
         System.out.println("Introduce la nota del alumno redondeada (0-10)");
         int nota = entrada.nextInt();
 
-        if (nota == 0 ||nota == 1 || nota == 2 ||nota == 3 || nota == 4){
+        if (nota == 0 || nota == 1 || nota == 2 || nota == 3 || nota == 4) {
             nota = 1;
-        }else if (nota == 5){
+        } else if (nota == 5) {
             nota = 2;
         } else if (nota == 6) {
             nota = 3;
@@ -105,7 +105,7 @@ public class PreExamen {
         }
 
 
-        switch (nota){
+        switch (nota) {
 
             case 1:
                 System.out.println("INSUFICIENTE.");
@@ -154,7 +154,7 @@ public class PreExamen {
         }
     }
 
-    public void preexamen5 () {
+    public void preexamen5() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -162,12 +162,12 @@ public class PreExamen {
         int mayor = 0;
         int maximo = 0;
 
-        for (int i = 1; i <= 5 ; i++) {
+        for (int i = 1; i <= 5; i++) {
 
             System.out.println("Introduce el " + i + "º salario de NTT Data:");
             sueldo = entrada.nextInt();
 
-            if (sueldo >= 1000){
+            if (sueldo >= 1000) {
                 mayor++;
             }
             if (sueldo > maximo) {
@@ -178,7 +178,7 @@ public class PreExamen {
         System.out.println("Hay " + mayor + " sueldos mayores de 1000€");
     }
 
-    public void preexamen6 () {
+    public void preexamen6() {
 
         Scanner entrada = new Scanner(System.in);
         int cantidad;
@@ -197,10 +197,10 @@ public class PreExamen {
             System.out.println("Introduce la alura en cm del " + i + "º alumno.");
             int altura = entrada.nextInt();
 
-            if (edad >= 18){
+            if (edad >= 18) {
                 mayor_edad++;
             }
-            if (altura >= 175){
+            if (altura >= 175) {
                 mayor_altura++;
             }
 
@@ -209,9 +209,10 @@ public class PreExamen {
 
         }
 
-        System.out.println("La edad media es: " + (edad_media/cantidad));
-        System.out.println("La altura media en cm es: " + (altura_media/cantidad));
+        System.out.println("La edad media es: " + (edad_media / cantidad));
+        System.out.println("La altura media en cm es: " + (altura_media / cantidad));
         System.out.println("Hay " + mayor_edad + " alumnos mayores de 18 años.");
         System.out.println("Hay " + mayor_altura + " alumnos por encima de los 175cm.");
 
     }
+}

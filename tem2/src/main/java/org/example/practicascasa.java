@@ -2,9 +2,9 @@ package org.example;
 
 import java.util.*;
 
-public class Practicas {
+public class Practicascasa {
 
-    public void fobonacci(){
+    public void fobonacci() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingresa la cantidad de números de Fibonacci a mostrar: ");
@@ -36,7 +36,7 @@ public class Practicas {
         }
     }
 
-    public void multiplos(){
+    public void multiplos() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingresa un número: ");
@@ -53,7 +53,7 @@ public class Practicas {
 
     }
 
-    public void conteodigitos(){
+    public void conteodigitos() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingresa un número: ");
@@ -68,7 +68,7 @@ public class Practicas {
 
     }
 
-    public void numeroprimo(){
+    public void numeroprimo() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingresa un número: ");
@@ -94,7 +94,7 @@ public class Practicas {
 
     }
 
-    public void trianguloasteriscos(){
+    public void trianguloasteriscos() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingresa el número de filas: ");
@@ -109,7 +109,7 @@ public class Practicas {
 
     }
 
-    public void numeropalindromo(){
+    public void numeropalindromo() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Ingresa un número: ");
@@ -130,7 +130,7 @@ public class Practicas {
 
     }
 
-    public void adivinanza(){
+    public void adivinanza() {
 
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
@@ -155,7 +155,7 @@ public class Practicas {
 
     }
 
-    public void sorteonombres(){
+    public void sorteonombres() {
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -180,7 +180,7 @@ public class Practicas {
 
     }
 
-    public void adivinanzaintentos(){
+    public void adivinanzaintentos() {
 
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
@@ -216,7 +216,7 @@ public class Practicas {
 
     }
 
-    public void contraseñasseguras(){
+    public void contraseñasseguras() {
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -250,7 +250,7 @@ public class Practicas {
 
     }
 
-    public void piedrapapeltijera(){
+    public void piedrapapeltijera() {
 
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -289,7 +289,7 @@ public class Practicas {
 
     }
 
-    public void piramidenumeros(){
+    public void piramidenumeros() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce el número de niveles para la pirámide: ");
@@ -304,7 +304,7 @@ public class Practicas {
 
     }
 
-    public void numeromedio(){
+    public void numeromedio() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce el primer número: ");
@@ -321,7 +321,7 @@ public class Practicas {
 
     }
 
-    public void iva(){
+    public void iva() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce el precio del producto: ");
@@ -334,7 +334,7 @@ public class Practicas {
 
     }
 
-    public void gestionnotas(){
+    public void gestionnotas() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("¿Cuántas asignaturas tiene el estudiante? ");
@@ -369,7 +369,7 @@ public class Practicas {
 
     }
 
-    public void calculasalario(){
+    public void calculasalario() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce el salario bruto: ");
@@ -396,7 +396,7 @@ public class Practicas {
 
     }
 
-    public void recomendadorlibros(){
+    public void recomendadorlibros() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Selecciona un género:");
@@ -452,7 +452,7 @@ public class Practicas {
 
     }
 
-    public void conversorunidades(){
+    public void conversorunidades() {
 
         Scanner scanner = new Scanner(System.in);
         boolean continuar = true;
@@ -529,7 +529,7 @@ public class Practicas {
         }
     }
 
-    public void contadorvocalesconsonantes(){
+    public void contadorvocalesconsonantes() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce una frase: ");
@@ -553,7 +553,7 @@ public class Practicas {
 
     }
 
-    public void reemplazopalabras(){
+    public void reemplazopalabras() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce una frase: ");
@@ -568,7 +568,7 @@ public class Practicas {
 
     }
 
-    public void inversioncadenas(){
+    public void inversioncadenas() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce una cadena: ");
@@ -584,7 +584,7 @@ public class Practicas {
 
     }
 
-    public void eliminarespacios(){
+    public void eliminarespacios() {
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Introduce una frase con espacios extra: ");
@@ -594,3 +594,4 @@ public class Practicas {
         System.out.println("Frase sin espacios extra: " + fraseSinEspacios);
 
     }
+}
