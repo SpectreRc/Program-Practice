@@ -48,20 +48,15 @@ public class PreExamen {
         }
 
         for (int i = 0 ; i < exponente ; i++) {
-
             resultado += base * base;
-
         }
+
         if (exponente == 0) {
             System.out.println("El resultado de la potencia es: 1");
-
         } else if (base < 0) {
-
             System.out.println("El resultado de la potencia es: " + (resultado * -1));
-
         } else if (base > 0)
             System.out.println("El resultado de la potencia es: " + resultado);
-
     }
 
     public void preexamen3 () {
@@ -73,13 +68,9 @@ public class PreExamen {
         long total = 0;
 
         for (int i = 1 ; i <= meses ; i++) {
-
             total += euros;
-
             System.out.println("Mes " + i + " = " + euros + "€");
-
             euros = euros * 2;
-
         }
 
         System.out.println("Total a pagar: " + total + "€");
@@ -163,7 +154,6 @@ public class PreExamen {
         int maximo = 0;
 
         for (int i = 1; i <= 5 ; i++) {
-
             System.out.println("Introduce el " + i + "º salario de NTT Data:");
             sueldo = entrada.nextInt();
 
@@ -174,6 +164,7 @@ public class PreExamen {
                 maximo = sueldo;
             }
         }
+
         System.out.println("El sueldo máximo es de: " + maximo + "€");
         System.out.println("Hay " + mayor + " sueldos mayores de 1000€");
     }
@@ -191,7 +182,6 @@ public class PreExamen {
         cantidad = entrada.nextInt();
 
         for (int i = 1; i <= cantidad; i++) {
-
             System.out.println("Introduce la edad del " + i + "º alumno.");
             int edad = entrada.nextInt();
             System.out.println("Introduce la alura en cm del " + i + "º alumno.");
@@ -228,21 +218,17 @@ public class PreExamen {
         int num2 = 1;
 
         while (num <= 0) {
-
             System.out.println("ERROR. introcude un número entero positivo.");
             num = entrada.nextInt();
-
         }
 
         System.out.print("Secuencia de Números:");
 
         for (int i = 0; i < num; i++) {
-
             System.out.print(" " + resultado);
             resultado = num1 + num2;
             num1 = num2;
             num2 = resultado;
-
         }
     }
 }
