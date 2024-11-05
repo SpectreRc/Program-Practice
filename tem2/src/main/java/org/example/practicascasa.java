@@ -185,11 +185,11 @@ public class Practicascasa {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
-        int numeroObjetivo = random.nextInt(100) + 1;
+        int numeroObjetivo = random.nextInt(1000) + 1;
         int intentosRestantes = 7;
         boolean adivinado = false;
 
-        System.out.println("¡Adivina el número entre 1 y 100! Tienes 7 intentos.");
+        System.out.println("¡Adivina el número entre 1 y 1000! Tienes 7 intentos.");
 
         while (intentosRestantes > 0 && !adivinado) {
             System.out.print("Ingresa tu intento: ");

@@ -22,7 +22,14 @@ public class Main {
         //Bucles bucles = new Bucles();
         //bucles.ejercicios2();
 
-        Aleatorios aleatorios = new Aleatorios();
-        aleatorios.ejer2();
+        //Aleatorios aleatorios = new Aleatorios();
+        //aleatorios.ejer2();
+
+        //PreExamen preexamen = new PreExamen();
+        //preexamen.preexamen7();
+
+        Practicascasa practicascasa = new Practicascasa();
+        practicascasa.adivinanzaintentos();
+
     }
 }
