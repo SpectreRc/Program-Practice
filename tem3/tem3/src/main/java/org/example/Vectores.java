@@ -86,6 +86,58 @@ public class Vectores {
         System.out.println("Tu número aparece " + contador + " veces");
     } //Contar ocurrencias de un número en un array
 
+    public void ejer4(){
+
+        Scanner entrada = new Scanner(System.in);
+        int numeros[] = new int[5];
+        int nuevo[] = new int[4];
+
+        for (int i = 0; i < numeros.length; i++) {
+            boolean error = false;
+            while (!error) {
+                try {
+                    System.out.println("Introduce un número: ");
+                    numeros[i] = entrada.nextInt();
+                    error = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Error: Por favor, introduce un número válido.");
+                    entrada.next();
+                }
+            }
+        }
+
+        int posicion = -1;
+        boolean posicionValida = false;
+
+        while (!posicionValida) {
+            try {
+                System.out.println("Introduce una posición (0 a " + (numeros.length - 1) + ") para eliminar el número: ");
+                posicion = entrada.nextInt();
+                if (posicion >= 0 && posicion < numeros.length) {
+                    posicionValida = true;
+                } else {
+                    System.out.println("Error: Posición fuera de rango. Intente de nuevo.");
+                }
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Por favor, introduce un número válido.");
+                entrada.next();
+            }
+        }
+
+        int[] nuevoVector = new int[numeros.length - 1];
+        int j = 0;
+        for (int i = 0; i < numeros.length; i++) {
+            if (i != posicion) {
+                nuevoVector[j++] = numeros[i];
+            }
+        }
+
+        System.out.println("El nuevo vector sin el número en la posición " + posicion + " es:");
+        for (int num : nuevoVector) {
+            System.out.print(num + " ");
+        }
+    } // Elimina un elemnto de un array
+
     public void ejer5(){
 
         Scanner entrada = new Scanner(System.in);
@@ -328,4 +380,70 @@ public class Vectores {
         System.out.println("La palabra más larga es: " + palabraMasLarga);
 
     } //Palabra más larga
+
+    public void ejer10(){
+
+        Scanner entrada = new Scanner(System.in);
+
+        String vector[] = new String[4];
+
+
+    } //Identificar primera letra y contar
+
+    public void samurais(){
+
+        Scanner entrada = new Scanner(System.in);
+        Random aleatorio = new Random();
+
+        int samurais[] = new int[7];
+        int suma = 0;
+
+        for (int i = 0; i < samurais.length; i++) {
+            boolean error = false;
+            while (!error) {
+                try {
+                    System.out.println("Introduce un número: ");
+                    samurais[i] = entrada.nextInt();
+                    error = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Error: Por favor, introduce un número válido.");
+                    entrada.next();
+                }
+            }
+        }
+
+        System.out.println("EQUIPO 1");
+        System.out.println("Introduce la potencia de los samuráis: ");
+
+        for (int i = 0; i < samurais.length; i++) {
+            System.out.print(" " + samurais[i] + " ");
+        }
+
+        System.out.println("");
+
+        int samurais2[] = new int[7];
+
+        for (int i = 0; i < samurais2.length; i++) {
+            boolean error = false;
+            while (!error) {
+                try {
+                    System.out.println("Introduce un número: ");
+                    samurais2[i] = entrada.nextInt();
+                    error = true;
+                } catch (InputMismatchException e) {
+                    System.out.println("Error: Por favor, introduce un número válido.");
+                    entrada.next();
+                }
+            }
+        }
+
+        System.out.println("EQUIPO 2");
+        System.out.println("Introduce la potencia de los samuráis: ");
+
+        for (int i = 0; i < samurais2.length; i++) {
+            System.out.print(" " + samurais2[i] + " ");
+        }
+
+        System.out.println("");
+    }
 }
