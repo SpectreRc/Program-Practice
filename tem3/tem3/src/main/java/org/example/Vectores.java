@@ -29,14 +29,14 @@ public class Vectores {
         }
     }
 
-    public void ejer1(){
+    public void ejer1() {
 
         Random aleatorio = new Random();
 
         int numeros[] = new int[8];
         int suma = 0;
 
-        for (int i = 0; i < numeros.length; i++){
+        for (int i = 0; i < numeros.length; i++) {
             numeros[i] = aleatorio.nextInt(501); //Genera un número aleatorio entre 0 y 500 (inclusive) usando aleatorio.nextInt(501) y lo asigna a la posición i de numeros.
             suma += numeros[i]; //Agrega el valor de numeros[i] a suma, acumulando el total de todos los números generados.
         }
@@ -45,7 +45,7 @@ public class Vectores {
 
     } //Suma de todos los elementos de un array
 
-    public void ejer2(){
+    public void ejer2() {
 
         Scanner entrada = new Scanner(System.in);
         int numeros[] = new int[5];
@@ -56,13 +56,13 @@ public class Vectores {
             numeros[i] = entrada.nextInt();
         }
 
-        for (int i = numeros.length - 1;i >= 0; i--){ //éste bucle es para invertir los números de dentro del vector
+        for (int i = numeros.length - 1; i >= 0; i--) { //éste bucle es para invertir los números de dentro del vector
             System.out.print(" " + numeros[i] + " ");
         }
 
     } //Invierte un array
 
-    public void ejer3(){
+    public void ejer3() {
 
         Scanner entrada = new Scanner(System.in);
         Random aleatorio = new Random();
@@ -87,7 +87,7 @@ public class Vectores {
         System.out.println("Tu número aparece " + contador + " veces");
     } //Contar ocurrencias de un número en un array
 
-    public void ejer4(){
+    public void ejer4() {
 
         Scanner entrada = new Scanner(System.in);
         int numeros[] = new int[5];
@@ -139,7 +139,7 @@ public class Vectores {
         }
     } // Elimina un elemnto de un array
 
-    public void ejer5(){
+    public void ejer5() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -172,7 +172,7 @@ public class Vectores {
 
     } //Rota un array hacia la derecha
 
-    public void ejer6(){
+    public void ejer6() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -195,8 +195,8 @@ public class Vectores {
             }
         }
 
-        while (izquierda < derecha){ //Compara los elementos en posiciones opuestas, moviéndose desde los extremos hacia el centro.
-            if (vector[izquierda] != vector[derecha]){ //Si los elementos en las posiciones izquierda y derecha no son iguales, significa que el array no es simétrico.
+        while (izquierda < derecha) { //Compara los elementos en posiciones opuestas, moviéndose desde los extremos hacia el centro.
+            if (vector[izquierda] != vector[derecha]) { //Si los elementos en las posiciones izquierda y derecha no son iguales, significa que el array no es simétrico.
                 simetrico = false;
                 break; //Termina el bucle porque ya se ha determinado que el array no es simétrico.
             }
@@ -204,14 +204,14 @@ public class Vectores {
             derecha--;
         }
 
-        if (simetrico){
+        if (simetrico) {
             System.out.println("El vector es simetrico");
         } else {
             System.out.println("El vector no es simetrico");
         }
     } //Comprueba si el array es simétrico (palíndromo)
 
-    public void ejer7(){
+    public void ejer7() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -275,7 +275,7 @@ public class Vectores {
 
     } //Combina dos arrays en uno
 
-    public void ejer8(){
+    public void ejer8() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -350,7 +350,7 @@ public class Vectores {
 
     } //Inserta un elemento en un array
 
-    public void ejer9(){
+    public void ejer9() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -373,7 +373,7 @@ public class Vectores {
 
     } //Palabra más larga
 
-    public void ejer10(){
+    public void ejer10() {
 
         Scanner entrada = new Scanner(System.in);
 
@@ -382,60 +382,120 @@ public class Vectores {
 
     } //Identificar primera letra y contar
 
-    public void samurais(){
+    public void samurais() {
 
         Scanner entrada = new Scanner(System.in);
         Random aleatorio = new Random();
 
-        int samurais[] = new int[7];
-        int suma = 0;
-
-        for (int i = 0; i < samurais.length; i++) {
-            boolean error = false;
-            while (!error) {
-                try {
-                    System.out.println("Introduce un número: ");
-                    samurais[i] = entrada.nextInt();
-                    error = true;
-                } catch (InputMismatchException e) {
-                    System.out.println("Error: Por favor, introduce un número válido.");
-                    entrada.next();
-                }
-            }
-        }
+        int[] equipo1 = new int[7];
+        int[] equipo2 = new int[7];
 
         System.out.println("EQUIPO 1");
-        System.out.println("Introduce la potencia de los samuráis: ");
-
-        for (int i = 0; i < samurais.length; i++) {
-            System.out.print(" " + samurais[i] + " ");
-        }
-
-        System.out.println("");
-
-        int samurais2[] = new int[7];
-
-        for (int i = 0; i < samurais2.length; i++) {
+        boolean equipo1Correcto = false;
+        while (!equipo1Correcto) {
+            System.out.print("Introduce la potencia de los samuráis: ");
+            int suma = 0;
             boolean error = false;
-            while (!error) {
+
+            for (int i = 0; i < equipo1.length; i++) {
                 try {
-                    System.out.println("Introduce un número: ");
-                    samurais2[i] = entrada.nextInt();
-                    error = true;
+                    equipo1[i] = entrada.nextInt();
+                    if (equipo1[i] < 1 || equipo1[i] > 24) {
+                        System.out.println("Error: La potencia debe estar entre 1 y 24.");
+                        error = true;
+                        break;
+                    }
+                    suma += equipo1[i];
                 } catch (InputMismatchException e) {
-                    System.out.println("Error: Por favor, introduce un número válido.");
-                    entrada.next();
+                    System.out.println("Error: Por favor, introduce solo números.");
+                    entrada.nextLine();
+                    error = true;
+                    break;
+                }
+            }
+            entrada.nextLine();
+
+            if (!error) {
+                if (suma == 30) {
+                    equipo1Correcto = true;
+                    System.out.println("Equipo 1 completado.");
+                } else {
+                    System.out.println("ERROR. La potencia total no suma 30. Vuelve a introducir los valores.");
                 }
             }
         }
 
         System.out.println("EQUIPO 2");
-        System.out.println("Introduce la potencia de los samuráis: ");
+        boolean equipo2Correcto = false;
+        while (!equipo2Correcto) {
+            System.out.print("Introduce la potencia de los samuráis: ");
+            int suma = 0;
+            boolean error = false;
 
-        for (int i = 0; i < samurais2.length; i++) {
-            System.out.print(" " + samurais2[i] + " ");
+            for (int i = 0; i < equipo2.length; i++) {
+                try {
+                    equipo2[i] = entrada.nextInt();
+                    if (equipo2[i] < 1 || equipo2[i] > 24) {
+                        System.out.println("Error: La potencia debe estar entre 1 y 24.");
+                        error = true;
+                        break;
+                    }
+                    suma += equipo2[i];
+                } catch (InputMismatchException e) {
+                    System.out.println("Error: Por favor, introduce solo números.");
+                    entrada.nextLine();
+                    error = true;
+                    break;
+                }
+            }
+            entrada.nextLine();
+
+            if (!error) {
+                if (suma == 30) {
+                    equipo2Correcto = true;
+                    System.out.println("Equipo 2 completado.");
+                } else {
+                    System.out.println("ERROR. La potencia total no suma 30. Vuelve a introducir los valores.");
+                }
+            }
         }
 
-        System.out.println("");
+        System.out.println("¡Empieza la batalla!");
+        int inicio = aleatorio.nextInt(7);
+
+        int bajasEquipo1 = 0;
+        int bajasEquipo2 = 0;
+
+        for (int i = 0; i < equipo1.length; i++) {
+            int indice = (inicio + i) % equipo1.length;
+            System.out.print("Samurai " + (indice + 1) + ". ");
+
+            if (equipo1[indice] == 0 && equipo2[indice] == 0) {
+                System.out.println("Ambos samuráis están muertos.");
+            } else if (equipo1[indice] > equipo2[indice]) {
+                System.out.println("Gana Equipo 1. " + equipo1[indice] + " vs " + equipo2[indice]);
+                equipo2[indice] = 0;
+                bajasEquipo2++;
+            } else if (equipo1[indice] < equipo2[indice]) {
+                System.out.println("Gana Equipo 2. " + equipo1[indice] + " vs " + equipo2[indice]);
+                equipo1[indice] = 0;
+                bajasEquipo1++;
+            } else {
+                System.out.println("Empate. Ambos samuráis mueren. " + equipo1[indice] + " vs " + equipo2[indice]);
+                equipo1[indice] = 0;
+                equipo2[indice] = 0;
+                bajasEquipo1++;
+                bajasEquipo2++;
+            }
+
+            if (bajasEquipo1 > equipo1.length / 2) {
+                System.out.println("¡Equipo 2 GANA! Equipo 1 ha tenido " + bajasEquipo1 + " bajas.");
+                break;
+            } else if (bajasEquipo2 > equipo2.length / 2) {
+                System.out.println("¡Equipo 1 GANA! Equipo 2 ha tenido " + bajasEquipo2 + " bajas.");
+                break;
+            }
+        }
     }
 }
+
