@@ -6,6 +6,6 @@ public class Main {
     public static void main(String[] args) {
 
         Vectores vectores = new Vectores();
-        vectores.prueba_buscar();
+        vectores.eliminar();
     }
 }

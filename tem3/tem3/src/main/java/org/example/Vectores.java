@@ -541,6 +541,41 @@ public class Vectores {
         }
     }
 
+    public void ordenar() {
+
+        int numeros[] = {4,3,10,34,21};
+        System.out.println(Arrays.toString(numeros));
+
+        Arrays.sort(numeros);
+        System.out.println(Arrays.toString(numeros));
+
+        int num = 34;
+
+        int posicion = Arrays.binarySearch(numeros,num);
+        System.out.println(posicion);
+    } //para ordenar vectores y buscar la posicion de un numero
+
+    public void eliminar() {
+
+        int vector[] = {1,1,6,7,8,8,10,15,15};
+
+        System.out.println(Arrays.toString(vector));
+
+        int aux[] = new int[vector.length];
+
+        int vector2[];
+
+        for (int i = 0; i < vector.length; i++) {
+            if (i != vector.length - 1 && vector[i] == vector[i + 1]) {
+                System.out.println("Duplicado: " + vector[i]);
+            }else{
+                aux[i] = vector[i];
+            }
+        }
+
+        System.out.println(Arrays.toString(aux));
+    } //eliminar duplicados de un vector
+
     public void locowin() {
 
         Scanner entrada = new Scanner(System.in);
