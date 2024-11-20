@@ -1,4 +1,4 @@
-package org.example
+package org.example;
 
 import java.util.InputMismatchException;
 import java.util.Random;
@@ -10,11 +10,13 @@ public class Primitiva {
 
         Scanner entrada = new Scanner(System.in);
 
-        int[] numtuyo = new int[6];
+        Random random = new Random();
 
-        int[] numganador = new int[6];
+        int numtuyo[] = new int[6];
+        int numganador[] = new int[6];
+        int aciertos = 0;
 
-        for (int i = 0; i < numtuyo.length; i++) {
+        for (int i = 0; i < numtuyo.length; i++) { //Con éste for me aseguro de sólo introducir números entre el 1 y el 49.
             boolean error = false;
             while (!error) {
                 try {
@@ -32,25 +34,23 @@ public class Primitiva {
             }
         }
 
-        Random random = new Random();
-        for (int i = 0; i < numganador.length; i++) {
+        for (int i = 0; i < numganador.length; i++) { // Aquí te da el número ganador randomizado.
             numganador[i] = random.nextInt(49) + 1;
         }
 
-        System.out.print("Tus números: ");
+        System.out.print("Números del usuario: "); // Te muestra tu número
         for (int num : numtuyo) {
             System.out.print(num + " ");
         }
         System.out.println();
 
-        System.out.print("Números ganadores: ");
+        System.out.print("Números ganadores: "); // Te muestra el número ganador
         for (int num : numganador) {
             System.out.print(num + " ");
         }
         System.out.println();
 
-        int aciertos = 0;
-        for (int i = 0; i < numtuyo.length; i++) {
+        for (int i = 0; i < numtuyo.length; i++) { // Te hace la comparativa entre tu número y el ganador a ver cuantos son iguales
             for (int j = 0; j < numganador.length; j++) {
                 if (numtuyo[i] == numganador[j]) {
                     aciertos++;
@@ -59,7 +59,7 @@ public class Primitiva {
             }
         }
 
-        System.out.println("Has acertado " + aciertos + " números.");
+        System.out.println("Has acertado " + aciertos + " números."); // Te muestra en pantalla cuantos números has acertado
         entrada.close();
     }
 }
